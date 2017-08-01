@@ -3,15 +3,11 @@ object MyModule {
         if (n < 0) -n
         else n
 
-    private def formatAbs(x: Int) = {
-        val msg = "The absolute value of %d is %d"
-        msg.format(x, abs(x))
-    }
 
     def main(args: Array[String]): Unit = {
-        println(formatAbs(-42))
-        println(formatFactorial(6))
-        println(formatFibonacci(6))
+        println(formatResult("absolute value", -42, abs))
+        println(formatResult("factorial", 7, factorial))
+        println(formatResult("fibonnaci", 5, fibonacci))
     }
 
     def factorial(n: Int): Int = {
@@ -21,11 +17,6 @@ object MyModule {
             else go (n-1, n*acc)
 
         go(n, 1)
-    }
-
-    private def formatFactorial(x: Int) = {
-        val msg = "The factorial of %d is %d"
-        msg.format(x, factorial(x))
     }
 
     def fibonacci(x: Int) : Int = {
@@ -41,8 +32,8 @@ object MyModule {
         go(x-2, 1, 0)
     }
 
-    private def formatFibonacci(x: Int) = {
-        val msg = "The %dth fibonacci is %d"
-        msg.format(x, fibonacci(x))
+    private def formatResult(name: String, n: Int, f: Int => Int) = {
+        val msg = "The %s of %d is %d"
+        msg.format(name, n, f(n))
     }
 }
