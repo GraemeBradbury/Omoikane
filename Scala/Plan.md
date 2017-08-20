@@ -1,9 +1,5 @@
-
-
-underscore.io/books
-    Essential Scala
-    Essential Play
-    Essential Slick
+* creative scala
+* essential scala
 
 The neophyte guide to scala
 danielwestheide.com/scala/neophyts.html
