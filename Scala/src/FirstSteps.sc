@@ -1,1 +1,1 @@
-println("Welcome to Scala World")
+"Electric blue".take(1)
