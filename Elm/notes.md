@@ -1,3 +1,4 @@
+#Installing Global
 There are times when you do not want to change ownership of the default directory that npm uses (i.e. /usr) as this could cause some problems, for example if you are sharing the system with other users.
 
 Instead, you can configure npm to use a different directory altogether. In our case, this will be a hidden directory in our home folder.
@@ -20,3 +21,7 @@ Test: Download a package globally without using sudo.
 Instead of steps 2-4 you can also use the corresponding ENV variable (e.g. if you don't want to modify ~/.profile):
 
     NPM_CONFIG_PREFIX=~/.npm-global
+
+#Getting elm-repl to work
+
+sudo ln -s /usr/lib/libncurses++w.so.6.0 /usr/lib/libtinfo.so.5
